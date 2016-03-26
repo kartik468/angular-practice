@@ -4,32 +4,17 @@
 <head>
     <title>angular SAP</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script type="text/javascript" src="vendor/angular.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
-    <script type="text/javascript" src="js/controllers/customersController.js"></script>
 </head>
 
-<body ng-controller="CustomersController">
-    <h2>Customers</h2> Filter:
-    <input type="text" ng-model="customerFilter.name"></input>
-    <br />
-    <br />
-    <table>
-        <tr>
-            <th ng-click="doSort('name')">Name</th>
-            <th ng-click="doSort('city')">City</th>
-            <th ng-click="doSort('orderTotal')">Order Total</th>
-            <th ng-click="doSort('joined')">Joined</th>
-        </tr>
-        <tr ng-repeat="cust in customers | filter:customerFilter | orderBy:sortBy:reverse">
-            <td>{{ cust.name }}</td>
-            <td>{{ cust.city }}</td>
-            <td>{{ cust.orderTotal | currency }}</td>
-            <td>{{ cust.joined | date}}</td>
-        </tr>
-    </table>
-    <br />
-    <span>Total customers: {{ customers.length }}</span>
+<body>
+
+    <div ng-view></div>
+
+    <script type="text/javascript" src="vendor/angular.js"></script>
+    <script type="text/javascript" src="vendor/angular-route.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/controllers/customersController.js"></script>
+    <script type="text/javascript" src="js/controllers/ordersController.js"></script>
 </body>
 
 </html>
