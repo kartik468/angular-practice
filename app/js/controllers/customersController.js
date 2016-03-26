@@ -7,8 +7,14 @@
 
         $scope.customers = [];
 
-        function init(){
-            $scope.customers = customersFactory.getCustomers();
+        function init() {
+            customersFactory.getCustomers()
+                .success(function(customers) {
+                    $scope.customers = customers;
+                })
+                .error(function(data, status, headers, config) {
+                    // handle error
+                });
         }
         init();
 
