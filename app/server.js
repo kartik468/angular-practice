@@ -22,6 +22,11 @@ app.get('/customers', function(req, res) {
     res.json(customers);
 });
 
+app.get('/orders', function(req, res) {
+    res.json(orders);
+});
+
+
 app.listen(8081);
 
 console.log('Express is listening at port 8081');
@@ -31,4 +36,13 @@ var customers = [
     { 'id': 2, 'joined': '2001-12-02', 'name': "Sam", 'city': "Kinwat", 'orderTotal': 3, 'orders': [{ 'id': 1, 'product': 'shoes2', 'total': 9.9 }] },
     { 'id': 3, 'joined': '2002-12-02', 'name': "Rohan", 'city': "Palghar", 'orderTotal': 11, 'orders': [{ 'id': 1, 'product': 'shoes3', 'total': 9.9 }, { 'id': 1, 'product': 'banana', 'total': 19.9 }] },
     { 'id': 4, 'joined': '2003-12-02', 'name': "Hitesh", 'city': "Palghar", 'orderTotal': 12, 'orders': [{ 'id': 1, 'product': 'shoes4', 'total': 9.9 }] }
+];
+
+var orders = [
+    { product: 'Shoes', total: 10 },
+    { product: 'Baseball', total: 9.9 },
+    { product: 'Bat', total: 9.9 },
+    { product: 'Headphones', total: 50 },
+    { product: 'Kindle', total: 10 },
+    { product: 'Spotify subscription', total: 20 }
 ];

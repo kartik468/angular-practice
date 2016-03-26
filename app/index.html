@@ -7,14 +7,23 @@
 </head>
 
 <body>
-
-    <div ng-view></div>
-
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#/customers">Customers</a></li>
+                <li><a href="#/orders">Orders</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div ng-view></div>
+    </main>
     <script type="text/javascript" src="vendor/angular.js"></script>
     <script type="text/javascript" src="vendor/angular-route.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/controllers/customersController.js"></script>
     <script type="text/javascript" src="js/controllers/ordersController.js"></script>
+    <script type="text/javascript" src="js/controllers/allOrdersController.js"></script>
     <script type="text/javascript" src="js/services/customersFactory.js"></script>
     <script type="text/javascript" src="js/services/customersService.js"></script>
     <script type="text/javascript" src="js/services/values.js"></script>

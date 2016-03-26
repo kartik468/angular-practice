@@ -15,8 +15,11 @@ body {
 
 th {
 	cursor: pointer;
+	background-color: #F7F3F9;
+	text-align: left;
 }
 
 th, td {
-	min-width: 100px
+	padding: 2px 13px 2px 0;
+	/*min-width: 150px*/
 }

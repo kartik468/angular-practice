@@ -14,6 +14,9 @@
         factory.getCustomer = function(id) {
             return $http.get('/customers/' + id);
         };
+        factory.getOrders = function() {
+        	return $http.get('/orders/');
+        };
         return factory;
     };
     customersFactory.$inject = ['$http'];
