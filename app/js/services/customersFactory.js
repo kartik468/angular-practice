@@ -11,11 +11,14 @@
         factory.getCustomers = function() {
             return $http.get('/customers');
         };
-        factory.getCustomer = function(id) {
-            return $http.get('/customers/' + id);
+        factory.getCustomer = function(customerId) {
+            return $http.get('/customers/' + customerId);
         };
         factory.getOrders = function() {
-        	return $http.get('/orders/');
+            return $http.get('/orders/');
+        };
+        factory.deleteCustomer = function(customerId) {
+            return $http.delete('/customers/' + customerId);
         };
         return factory;
     };
